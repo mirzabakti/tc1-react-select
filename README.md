@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+API public: https://pokeapi.co/docs/v2#berries-section
+
+1. buatlah list dropdown dengan data di atas beserta fitur input search di dalamnya.
+2. filter data tersebut secara ascending.
+3. munculkan output dari hasil pilihan data.
