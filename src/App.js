@@ -8,14 +8,14 @@ function App() {
   const getBerries = async () => {
     const berries = await fetch("https://pokeapi.co/api/v2/berry/");
     const value = await berries.json();
-    const result = value.results.map(data => {
+    let result = value.results.map((data) => {
       return {
         label: data.name,
         value: data.name,
       };
     });
 
-    setDatas(result);
+    setDatas(result.sort((a, b) => a.label.localeCompare(b.label)));
   };
 
   useEffect(() => {
