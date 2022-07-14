@@ -1,18 +1,20 @@
 import Select from "react-select";
 import "./App.css";
+import { useEffect } from "react";
 
 function App() {
-  const options = [
-    { value: "chocolate", label: "Chocolate" },
-    { value: "strawberry", label: "Strawberry" },
-    { value: "vanilla", label: "Vanilla" },
-  ];
+  const getBerries = async () => {
+    const berries = await fetch("https://pokeapi.co/api/v2/berry/");
+    const value = await berries.json();
 
-  return (
-    <div className="App">
-      <Select options={options}></Select>
-    </div>
-  );
+    console.log(value);
+  };
+
+  useEffect(() => {
+    getBerries();
+  }, []);
+
+  return <div className="App">{/* <Select options={options}></Select> */}</div>;
 }
 
 export default App;
